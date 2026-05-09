@@ -189,7 +189,7 @@ const Navbar = () => {
                   <div key={link.name}>
                     <Link
                       to={link.path}
-                      onClick={() => !link.subLinks && setIsOpen(false)}
+                      onClick={() => setIsOpen(false)}
                       className={`text-2xl font-serif font-bold transition-all ${
                         isActive(link.path) ? 'text-brand-gold' : 'text-brand-brown'
                       }`}
@@ -199,7 +199,12 @@ const Navbar = () => {
                     {link.subLinks && (
                       <div className="pl-4 mt-2 flex flex-col space-y-2 border-l border-brand-gold/20">
                         {link.subLinks.map(sub => (
-                          <Link key={sub.name} to={sub.path} onClick={() => setIsOpen(false)} className="text-sm font-bold text-brand-brown/60 uppercase tracking-widest">
+                          <Link 
+                            key={sub.name} 
+                            to={sub.path} 
+                            onClick={() => setIsOpen(false)} 
+                            className="text-sm font-bold text-brand-brown/60 uppercase tracking-widest"
+                          >
                             {sub.name}
                           </Link>
                         ))}
