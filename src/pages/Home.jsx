@@ -36,68 +36,41 @@ const Home = () => {
   return (
     <div className="overflow-x-hidden">
       {/* 2. HERO SECTION - PREMIUM SPLIT LAYOUT (UPGRADED) */}
-      <section className="relative pt-32 pb-20 lg:pt-32 lg:pb-12 bg-[#fdfbf7] overflow-hidden">
+      <section className="relative pt-20 pb-10 lg:pt-32 lg:pb-12 bg-[#fdfbf7] overflow-hidden">
         {/* Premium Botanical Rice Pattern (Artist Sketch Style) */}
         <motion.div 
           initial={{ opacity: 0, x: -20, rotate: -5 }}
           animate={{ opacity: 0.3, x: 0, rotate: 0 }}
           transition={{ duration: 2, delay: 0.2 }}
-          className="absolute -top-20 -left-20 w-[600px] h-auto pointer-events-none z-0 mix-blend-multiply"
-        >
-          <img src={newRicePattern} alt="" className="w-full h-auto" />
-        </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 30, rotate: -35 }}
-          animate={{ opacity: 0.25, y: 0, rotate: -30 }}
-          transition={{ duration: 2, delay: 0.5 }}
-          className="absolute -bottom-32 -left-32 w-[700px] h-auto pointer-events-none z-0 mix-blend-multiply"
-        >
-          <img src={newRicePattern} alt="" className="w-full h-auto" />
-        </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.8, rotate: 40 }}
-          animate={{ opacity: 0.2, scale: 1, rotate: 45 }}
-          transition={{ duration: 2, delay: 0.8 }}
-          className="absolute top-1/4 -right-40 w-[900px] h-auto pointer-events-none z-0 mix-blend-multiply"
-        >
-          <img src={newRicePattern} alt="" className="w-full h-auto" />
-        </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.15 }}
-          transition={{ duration: 2, delay: 1.2 }}
-          className="absolute bottom-10 right-20 w-[500px] h-auto pointer-events-none z-0 rotate-[160deg] mix-blend-multiply"
+          className="absolute -top-20 -left-20 w-[400px] md:w-[600px] h-auto pointer-events-none z-0 mix-blend-multiply"
         >
           <img src={newRicePattern} alt="" className="w-full h-auto" />
         </motion.div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center min-h-[75vh] gap-12 py-10 lg:py-0">
-            <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
+          <div className="flex flex-col lg:flex-row items-center lg:min-h-[75vh] gap-8 md:gap-12 py-4 lg:py-0">
+            <div className="lg:w-1/2 space-y-4 md:space-y-8 text-center lg:text-left">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <span className="text-brand-gold font-bold tracking-[0.2em] uppercase text-sm mb-4 block">100% Naturally Organic</span>
-                <h1 className="text-5xl md:text-[5rem] font-serif font-black text-brand-brown leading-[1.1] mb-6">
+                <span className="text-brand-gold font-bold tracking-[0.2em] uppercase text-[10px] md:text-sm mb-2 md:mb-4 block">100% Naturally Organic</span>
+                <h1 className="text-4xl md:text-[5rem] font-serif font-black text-brand-brown leading-[1.1] mb-4 md:mb-6">
                   More Confident <br />
                   With <span className="text-brand-gold italic">Ellora.</span>
                 </h1>
-                <p className="text-base md:text-xl text-brand-brown/70 max-w-lg mb-8 mx-auto lg:mx-0">
-                  Premium, rice-based beauty products crafted for African skin and hair. No sulfates. No parabens. No compromise.
+                <p className="text-sm md:text-xl text-brand-brown/70 max-w-lg mb-6 md:mb-8 mx-auto lg:mx-0">
+                  Premium, rice-based beauty products crafted for African skin and hair.
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <div className="flex flex-row items-center justify-center lg:justify-start gap-2 md:gap-4 px-2 md:px-0">
                   <WhatsAppButton 
-                    className="bg-brand-brown text-white px-8 py-4 md:px-10 md:py-5 rounded-full font-bold hover:bg-brand-gold transition-all shadow-xl w-full sm:w-auto flex items-center justify-center gap-2"
+                    className="flex-1 sm:flex-none bg-brand-brown text-white px-4 md:px-10 py-3.5 md:py-5 rounded-full font-bold text-[11px] md:text-base hover:bg-brand-gold transition-all shadow-xl flex items-center justify-center gap-1 md:gap-2"
                     message="Hi Ellora, I want to explore your products!"
                   >
-                    Shop Now <ArrowRight size={18} />
+                    Shop <span className="hidden sm:inline">Now</span> <ArrowRight size={16} className="md:size-[20px]" />
                   </WhatsAppButton>
-                  <Link to="/about" className="text-brand-brown font-bold border-2 border-brand-brown/10 px-8 py-4 md:px-10 md:py-5 rounded-full hover:bg-brand-brown hover:text-white transition-all w-full sm:w-auto text-center">
+                  <Link to="/about" className="flex-1 sm:flex-none text-brand-brown font-bold border-2 border-brand-brown/10 px-4 md:px-10 py-3.5 md:py-5 rounded-full text-[11px] md:text-base hover:bg-brand-brown hover:text-white transition-all text-center">
                     Our Story
                   </Link>
                 </div>
@@ -111,20 +84,20 @@ const Home = () => {
                  transition={{ duration: 1 }}
                  className="relative z-10"
                >
-                 <div className="rounded-t-full border-[12px] border-white shadow-2xl overflow-hidden aspect-[4/4.5] max-w-[400px] mx-auto relative">
+                 <div className="rounded-t-full border-[8px] md:border-[12px] border-white shadow-2xl overflow-hidden aspect-[4/4.5] max-w-[280px] md:max-w-[400px] mx-auto relative">
                     <img src={shopHeroImg} alt="Ellora Model" className="w-full h-full object-cover" />
                  </div>
                </motion.div>
-               {/* Floating badge */}
+               {/* Floating badge - Smaller on mobile */}
                <motion.div 
                  initial={{ opacity: 0, y: 20 }}
                  animate={{ opacity: 1, y: 0 }}
                  transition={{ delay: 1, duration: 0.5 }}
-                 className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white p-6 rounded-2xl shadow-xl z-20 border border-brand-brown/5 min-w-[200px]"
+                 className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white p-3 md:p-6 rounded-xl md:rounded-2xl shadow-xl z-20 border border-brand-brown/5 min-w-[140px] md:min-w-[200px]"
                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold font-bold text-xl">100%</div>
-                    <p className="text-xs font-bold text-brand-brown tracking-tight leading-tight">Pure Natural <br />Ingredients</p>
+                  <div className="flex items-center gap-2 md:gap-4">
+                    <div className="w-8 h-8 md:w-12 md:h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold font-bold text-sm md:text-xl">100%</div>
+                    <p className="text-[8px] md:text-xs font-black text-brand-brown tracking-tight leading-tight uppercase">Pure Natural <br />Ingredients</p>
                   </div>
                </motion.div>
             </div>
