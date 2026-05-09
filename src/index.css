@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "DM Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #3B1F0E;
+  background-color: #FDF8F2;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.glass-nav {
+  background: rgba(253, 248, 242, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.kente-border {
+  background: linear-gradient(90deg, #E63B1F 0%, #E63B1F 33%, #F5C518 33%, #F5C518 66%, #1B6B2F 66%, #1B6B2F 100%);
+  height: 4px;
+  width: 100%;
+}
+
+.kente-divider {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #E63B1F,
+    #E63B1F 10px,
+    #F5C518 10px,
+    #F5C518 20px,
+    #1B6B2F 20px,
+    #1B6B2F 30px
+  );
+  height: 2px;
+  opacity: 0.3;
+}
